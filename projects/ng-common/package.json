@@ -1,0 +1,12 @@
+{
+  "name": "@bjanderson/ng-common",
+  "version": "1.0.2",
+  "author": "BJ Anderson",
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "^12.x",
+    "@angular/core": "^12.x",
+    "@bjanderson/utils": "^1.x",
+    "tslib": "^2.2.0"
+  }
+}

@@ -3,5 +3,42 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ng-common": {
+      "prefix": "bjng",
+      "projectType": "library",
+      "root": "projects/ng-common",
+      "sourceRoot": "projects/ng-common/src",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/ng-common/tsconfig.lib.json",
+            "project": "projects/ng-common/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-common/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-common/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-builders/jest:run",
+          "options": {
+            "tsConfig": "tsconfig.spec.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": ["projects/ng-common/**/*.ts", "projects/ng-common/**/*.html"]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ng-common"
 }

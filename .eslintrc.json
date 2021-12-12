@@ -15,7 +15,7 @@
   "ignorePatterns": ["scripts/*"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": "tsconfig.eslint.json",
+    "project": "./.eslintrc.json",
     "sourceType": "module"
   },
   "plugins": ["jsdoc", "prettier", "@typescript-eslint", "@typescript-eslint/tslint"],

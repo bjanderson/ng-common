@@ -54,7 +54,7 @@ describe('CrudService', () => {
     });
 
     it('calls apiService.get()', () => {
-      const spy = spyOn(service.api, 'get').and.callThrough();
+      const spy = jest.spyOn(service.api, 'get');
       service.getAll();
       expect(spy).toHaveBeenCalledWith(url);
     });
@@ -70,7 +70,7 @@ describe('CrudService', () => {
     });
 
     it('calls apiService.get()', () => {
-      const spy = spyOn(service.api, 'get').and.callThrough();
+      const spy = jest.spyOn(service.api, 'get');
       const id = 'id1';
       service.get(id);
       expect(spy).toHaveBeenCalledWith(`${url}/${id}`);
@@ -87,7 +87,7 @@ describe('CrudService', () => {
     });
 
     it('calls apiService.post()', () => {
-      const spy = spyOn(service.api, 'post').and.callThrough();
+      const spy = jest.spyOn(service.api, 'post');
       const testObj = new TestClass({ id: 'id1' });
       service.create(testObj);
       expect(spy).toHaveBeenCalledWith(url, testObj);
@@ -104,7 +104,7 @@ describe('CrudService', () => {
     });
 
     it('calls apiService.put()', () => {
-      const spy = spyOn(service.api, 'put').and.callThrough();
+      const spy = jest.spyOn(service.api, 'put');
       const testObj = new TestClass({ id: 'id1' });
       service.update(testObj);
       expect(spy).toHaveBeenCalledWith(url, testObj);
@@ -121,7 +121,7 @@ describe('CrudService', () => {
     });
 
     it('calls apiService.delete()', () => {
-      const spy = spyOn(service.api, 'delete').and.callThrough();
+      const spy = jest.spyOn(service.api, 'delete');
       const testObj = new TestClass({ id: 'id1' });
       service.delete(testObj);
       expect(spy).toHaveBeenCalledWith(`${url}/${testObj.id}`);

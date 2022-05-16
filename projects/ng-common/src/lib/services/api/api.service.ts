@@ -71,19 +71,20 @@ export class ApiService {
    * Handles any error responses from the server.
    */
   private mapError(error: any): Observable<ErrorResponse> {
-    return throwError(this.mapResponse(error));
+    const err = new ErrorResponse(this.mapResponse(error));
+    return throwError(this.mapResponse(err));
   }
 
   /**
    * Handles any non-error responses from the server, and returns the body of the response.
    */
-  private mapResponse(response: any): ErrorResponse {
+  private mapResponse(response: any): any {
     let r: any;
     try {
       r = response.json();
     } catch (e) {
       r = response;
     }
-    return new ErrorResponse(r);
+    return r;
   }
 }

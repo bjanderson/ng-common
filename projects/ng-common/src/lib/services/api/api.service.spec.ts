@@ -82,7 +82,7 @@ describe('ApiService', () => {
     });
 
     it('calls the mapResponse function', () => {
-      spyOn(service, 'mapResponse').and.returnValue(EMPTY);
+      jest.spyOn(service, 'mapResponse').mockImplementation(() => EMPTY);
       service.mapError({});
       expect(service.mapResponse).toHaveBeenCalled();
     });

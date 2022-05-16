@@ -2,17 +2,13 @@ import { ErrorResponse } from '@bjanderson/utils';
 import { Observable, of, throwError } from 'rxjs';
 import { AbstractDataSource } from './abstract-data-source';
 
-const alertService: any = {
-  errorResponse: () => undefined,
-};
-
 const apiService: any = {
   getItems: () => of([{ pk: 1 }]),
 };
 
 class TestDataSource extends AbstractDataSource<any> {
-  constructor(protected alertSvc: any, private apiSvc: any) {
-    super(alertSvc);
+  constructor(private apiSvc: any) {
+    super();
   }
 
   protected requestData(request?: any): Observable<any[]> {
@@ -22,7 +18,7 @@ class TestDataSource extends AbstractDataSource<any> {
 
 let component: any;
 function init(): void {
-  component = new TestDataSource(alertService, apiService);
+  component = new TestDataSource(apiService);
 }
 
 describe('AbstractDataSource()', () => {
@@ -133,13 +129,6 @@ describe('AbstractDataSource()', () => {
       const spy = jest.spyOn(component.loadingSubject, 'next');
       component.load();
       expect(spy).toHaveBeenCalledWith(false);
-    });
-
-    it('calls alertService.errorResponse()', () => {
-      component.requestData = () => throwError(new ErrorResponse());
-      const spy = jest.spyOn(component.alertService, 'errorResponse');
-      component.load();
-      expect(spy).toHaveBeenCalled();
     });
 
     it('calls loadingSubject.next() with false (error)', () => {

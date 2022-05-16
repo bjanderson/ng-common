@@ -1,17 +1,13 @@
 import { Observable, of } from 'rxjs';
 import { AbstractServerSideDataSource } from './abstract-server-side-data-source';
 
-const alertService: any = {
-  errorResponse: () => undefined,
-};
-
 const apiService: any = {
   getItems: () => of([{ pk: 1 }]),
 };
 
 class TestDataSource extends AbstractServerSideDataSource<any> {
-  constructor(protected alertSvc: any, private apiSvc: any) {
-    super(alertSvc);
+  constructor(private apiSvc: any) {
+    super();
   }
 
   protected requestData(request?: any): Observable<any[]> {
@@ -21,7 +17,7 @@ class TestDataSource extends AbstractServerSideDataSource<any> {
 
 let component: any;
 function init(): void {
-  component = new TestDataSource(alertService, apiService);
+  component = new TestDataSource(apiService);
 }
 
 describe('AbstractServerSideDataSource()', () => {

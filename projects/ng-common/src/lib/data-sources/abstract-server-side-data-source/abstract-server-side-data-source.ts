@@ -44,7 +44,7 @@ export abstract class AbstractServerSideDataSource<T> implements DataSource<T> {
     return this.paginator?.pageSize || this.pageSizes[0];
   }
 
-  constructor(protected alertService: { errorResponse(error: any): void }) {}
+  constructor() {}
 
   // TABLE DATA
   protected abstract requestData(request?: any): Observable<T[]>;

@@ -1,6 +1,6 @@
 {
   "name": "@bjanderson/ng-common-lib",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "license": "MIT",
   "publishConfig": {
     "@bjanderson:registry": "https://npm.pkg.github.com"

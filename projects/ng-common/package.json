@@ -6,7 +6,7 @@
   "peerDependencies": {
     "@angular/common": "^14.x",
     "@angular/core": "^14.x",
-    "@bjanderson/utils": "^1.x",
+    "@bjanderson/utils": "^2.x",
     "tslib": "^2.x"
   }
 }

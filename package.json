@@ -19,6 +19,7 @@
     "lint": "ng lint",
     "test": "ng test",
     "test:cov": "ng test --coverage",
+    "prepublish": "npm run push",
     "prepush": "npm run build",
     "push": "node scripts/publish.js",
     "v": "npm --prefix ./projects/ng-common version",

@@ -5,9 +5,9 @@ import { ApiService } from '../api';
 
 export abstract class CrudService<T> {
   constructor(
-    private api: ApiService,
-    private url: string,
-    private Model: new (o?: Partial<T>) => T
+    protected api: ApiService,
+    protected url: string,
+    protected Model: new (o?: Partial<T>) => T
   ) {}
 
   public getAll(): Observable<T[]> {

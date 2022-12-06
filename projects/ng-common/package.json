@@ -4,8 +4,8 @@
   "author": "BJ Anderson",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^14.x",
-    "@angular/core": "^14.x",
+    "@angular/common": "^15.x",
+    "@angular/core": "^15.x",
     "@bjanderson/utils": "^2.x",
     "tslib": "^2.x"
   }

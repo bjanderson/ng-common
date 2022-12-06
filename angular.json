@@ -40,5 +40,8 @@
       }
     }
   },
-  "defaultProject": "ng-common"
+  "defaultProject": "ng-common",
+  "cli": {
+    "analytics": false
+  }
 }

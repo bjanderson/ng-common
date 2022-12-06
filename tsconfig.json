@@ -8,19 +8,26 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "lib": ["es2018", "dom"],
+    "lib": [
+      "es2018",
+      "dom"
+    ],
     "module": "es2020",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "outDir": "./dist/out-tsc",
     "paths": {
-      "ng-common": ["dist/ng-common/ng-common", "dist/ng-common"]
+      "ng-common": [
+        "dist/ng-common/ng-common",
+        "dist/ng-common"
+      ]
     },
     "sourceMap": true,
     "strict": true,
     "strictPropertyInitialization": false,
-    "target": "es2017"
+    "target": "ES2022",
+    "useDefineForClassFields": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

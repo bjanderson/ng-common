@@ -7,7 +7,7 @@
     "jest": true
   },
   "extends": [
-    "airbnb/base",
+    "airbnb-base",
     "prettier",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking"

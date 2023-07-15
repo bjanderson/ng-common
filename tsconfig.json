@@ -1,4 +1,3 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
@@ -8,20 +7,14 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importHelpers": true,
-    "lib": [
-      "es2018",
-      "dom"
-    ],
+    "lib": ["es2018", "dom"],
     "module": "es2020",
     "moduleResolution": "node",
     "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "outDir": "./dist/out-tsc",
     "paths": {
-      "ng-common": [
-        "dist/ng-common/ng-common",
-        "dist/ng-common"
-      ]
+      "ng-common": ["dist/ng-common/ng-common", "dist/ng-common"]
     },
     "sourceMap": true,
     "strict": true,
